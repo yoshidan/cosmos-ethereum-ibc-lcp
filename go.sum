@@ -1244,8 +1244,8 @@ github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q
 github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:aYKd//L2LvnjZzWKhF00oedf4jCCReLcmhLdhm1A27Q=
 github.com/xrash/smetrics v0.0.0-20240521201337-686a1a2994c1 h1:gEOO8jv9F4OT7lGCjxCBTO/36wtF6j2nSip77qHd4x4=
 github.com/xrash/smetrics v0.0.0-20240521201337-686a1a2994c1/go.mod h1:Ohn+xnUBiLI6FVj/9LpzZWtj1/D6lUovWYBkxHVV3aM=
-github.com/yoshidan/ethereum-ibc-relay-prover v1.0.0-rc1 h1:QyT4QayKpY66MxJ5dFOQ7cfDyWRWioo/y8kt+RuvcNE=
-github.com/yoshidan/ethereum-ibc-relay-prover v1.0.0-rc1/go.mod h1:iRTnqiVCvY/BwJ6qM/RsVNQOuqAy1Vp6cqRhrW8zooc=
+github.com/yoshidan/ethereum-ibc-relay-prover v1.0.0-rc2 h1:7X8TOxmPwPJDeDu4MptL0K2tbvpZZUi2QbvMQw2HzW0=
+github.com/yoshidan/ethereum-ibc-relay-prover v1.0.0-rc2/go.mod h1:deEALRkcxoYcK1dX6KIv8wSxE0+w/NMdvgVrlxQKNGc=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.32/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=

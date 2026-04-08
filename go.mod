@@ -280,4 +280,4 @@ require (
 
 replace github.com/btcsuite/btcd/btcec/v2 => github.com/btcsuite/btcd/btcec/v2 v2.3.2
 
-replace github.com/datachainlab/ethereum-ibc-relay-prover => github.com/yoshidan/ethereum-ibc-relay-prover v1.0.0-rc1
+replace github.com/datachainlab/ethereum-ibc-relay-prover => github.com/yoshidan/ethereum-ibc-relay-prover v1.0.0-rc2
