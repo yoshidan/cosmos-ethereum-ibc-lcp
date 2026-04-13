@@ -23,7 +23,7 @@ services:
       - ./config/jwtsecret:/secret/jwtsecret
     environment:
       - GENESIS_TIMESTAMP=${GENESIS_TIMESTAMP}
-      - EPOCH_HF=${EPOCH_HF}
+      - EPOCH_LATEST_HF=${EPOCH_LATEST_HF}
     healthcheck:
       test: [ "CMD", "curl", "-X", "POST", "-H", "'Content-Type: application/json'", "--data", '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x0", false]}', "http://127.0.0.1:${GETH_HTTP_PORT:-8545}" ]
       interval: "5s"
@@ -74,7 +74,6 @@ services:
       - GETH_HTTP_PORT=${GETH_HTTP_PORT:-8545}
       - BEACON_HTTP_PORT=${BEACON_HTTP_PORT:-9596}
       - GENESIS_TIMESTAMP=${GENESIS_TIMESTAMP}
-      - EPOCH_HF=${EPOCH_HF}
     ports:
       - "8008:8008" # Metrics port
       - ${BEACON_HTTP_PORT:-9596}:${BEACON_HTTP_PORT:-9596} # REST API port
@@ -99,12 +98,13 @@ services:
       - --eth1=true
       - --eth1.providerUrls=http://geth:${GETH_HTTP_PORT}
       - --execution.urls=http://geth:8551
+      - --execution.engineMock=false
       - --params.ALTAIR_FORK_EPOCH=0
       - --params.BELLATRIX_FORK_EPOCH=0
       - --params.CAPELLA_FORK_EPOCH=0
       - --params.DENEB_FORK_EPOCH=0
       - --params.ELECTRA_FORK_EPOCH=0
-      - --params.FULU_FORK_EPOCH=${EPOCH_HF} # Latest HF is Fulu
+      - --params.FULU_FORK_EPOCH=${EPOCH_LATEST_HF}
       - --params.DEPOSIT_CONTRACT_ADDRESS=0x4242424242424242424242424242424242424242
       - --suggestedFeeRecipient=0xa89F47C6b463f74d87572b058427dA0A13ec5425
       - --beaconNodes=http://127.0.0.1:${BEACON_HTTP_PORT}
@@ -151,7 +151,6 @@ services:
       - GETH_HTTP_PORT=${GETH_HTTP_PORT:-8545}
       - BEACON_HTTP_PORT=${BEACON_HTTP_PORT:-9596}
       - GENESIS_TIMESTAMP=${GENESIS_TIMESTAMP}
-      - EPOCH_HF=${EPOCH_HF}
     command:
       - validator
       - --network=dev
@@ -161,7 +160,7 @@ services:
       - --params.CAPELLA_FORK_EPOCH=0
       - --params.DENEB_FORK_EPOCH=0
       - --params.ELECTRA_FORK_EPOCH=0
-      - --params.FULU_FORK_EPOCH=${EPOCH_HF}
+      - --params.FULU_FORK_EPOCH=${EPOCH_LATEST_HF}
       - --params.DEPOSIT_CONTRACT_ADDRESS=0x4242424242424242424242424242424242424242
       - --suggestedFeeRecipient=0xa89F47C6b463f74d87572b058427dA0A13ec5425
       - --beaconNodes=http://lodestar:${BEACON_HTTP_PORT}

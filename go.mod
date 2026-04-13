@@ -4,7 +4,7 @@ go 1.25.1
 
 require (
 	github.com/datachainlab/ethereum-ibc-relay-chain v0.3.18
-	github.com/datachainlab/ethereum-ibc-relay-prover v0.3.14
+	github.com/datachainlab/ethereum-ibc-relay-prover v0.3.16
 	github.com/datachainlab/ibc-hd-signer v0.1.2
 	github.com/datachainlab/lcp-go v0.2.23
 	github.com/hyperledger-labs/yui-relayer v0.5.19
@@ -280,4 +280,4 @@ require (
 
 replace github.com/btcsuite/btcd/btcec/v2 => github.com/btcsuite/btcd/btcec/v2 v2.3.2
 
-replace github.com/datachainlab/ethereum-ibc-relay-prover => github.com/yoshidan/ethereum-ibc-relay-prover v1.0.0-rc1
+replace github.com/datachainlab/ethereum-ibc-relay-prover => github.com/yoshidan/ethereum-ibc-relay-prover v1.0.0-rc3
