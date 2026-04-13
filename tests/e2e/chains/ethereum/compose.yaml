@@ -115,6 +115,8 @@ services:
       - --logFile=/logs/beacon.log
       - --logFileLevel=debug
       - --logFileDailyRotate=5
+      - --chain.archiveStateEpochFrequency=1
+      - --chain.pruneHistory=false
     depends_on:
       geth:
         condition: service_healthy
