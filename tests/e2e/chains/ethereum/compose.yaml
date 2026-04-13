@@ -117,6 +117,7 @@ services:
       - --logFileDailyRotate=5
       - --chain.archiveStateEpochFrequency=1
       - --chain.pruneHistory=false
+      - --chain.serveHistoricalState=true
     depends_on:
       geth:
         condition: service_healthy
