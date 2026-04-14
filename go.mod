@@ -280,6 +280,6 @@ require (
 
 replace github.com/btcsuite/btcd/btcec/v2 => github.com/btcsuite/btcd/btcec/v2 v2.3.2
 
-replace github.com/datachainlab/ethereum-ibc-relay-prover => github.com/yoshidan/ethereum-ibc-relay-prover v1.0.0-rc4
+replace github.com/datachainlab/ethereum-ibc-relay-prover => github.com/yoshidan/ethereum-ibc-relay-prover v1.0.0-rc5
 
 replace github.com/OffchainLabs/prysm/v7 => github.com/yoshidan/prysm/v7 v7.1.3-p1
