@@ -42,6 +42,7 @@ retry 5 $RLY lcp-tendermint light init $CHAINID_ONE -f
 # add a path between chain0 and chain1
 $RLY paths add $CHAINID_ONE $CHAINID_TWO $PATH_NAME --file=./configs/path.json
 
+sleep 600
 retry 5 $RLY tx clients $PATH_NAME
 sleep 3
 retry 5 $RLY lcp activate-client $PATH_NAME --src=true
